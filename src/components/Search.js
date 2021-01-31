@@ -4,9 +4,32 @@ class Search extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            searchWord: ""
+            categoria: ""
         };
     }
+    
+    render() {
+        return (
+        <div className="search-container">
+            <select
+                placeholder="Buscar en todos los gifs"
+                className="search-input"
+            >
+                <option>{this.state.categoria}</option>
+            </select>
+            <button
+                className="search-button"
+                onClick={() => {
+                    this.props.emitSearch(this.state.searchWord);
+                }}
+            >
+                Buscar
+            </button>
+
+        </div>
+        );
+    }
+    /*
     render() {
         return (
         <div className="search-container">
@@ -30,7 +53,7 @@ class Search extends Component {
             </button>
         </div>
         );
-    }
+    }*/
 }
 
 export default Search;
