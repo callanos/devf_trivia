@@ -4,9 +4,14 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+//Browser Router
+import {BrowserRouter} from 'react-router-dom'
+
 ReactDOM.render(
   <React.StrictMode>
-    <App atributo="propiedad"/>
+    <BrowserRouter>
+      <App atributo="propiedad"/>
+    </BrowserRouter>  
   </React.StrictMode>,
   document.getElementById('root')
 );

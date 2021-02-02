@@ -3,39 +3,26 @@ import { Component } from 'react';
 class FormApi extends Component {
     constructor(props) {
         super(props);
-/*        this.state = {
-            categoria: "",
-            dificultad: "",
-            tipo: ""
-        }*/
-    }
-    
+        this.state = {
+            categoria: [],
+            dificultad: [],
+            tipo: []
+        };
+  }
+      
     render() {
         return (
-        <div className="search-container">
+          <div className="triviaForm">
             Categoría
-            <select
-                placeholder="Buscar en todos los gifs"
-                className="search-input"
-            >
-                <option>1</option>
+            <select name="categorias" className="selectControl">
+              {this.state.categoria.map((elemento,i)=>(
+                <option key= {i} value={elemento}>{elemento}</option>
+              )
+              )}
+              {console.log(this.state.categoria)}
             </select>
-            Dificultad
-            <select
-                placeholder="Buscar en todos los gifs"
-                className="search-input"
-            >
-                <option>1</option>
-            </select>
-            Tipo
-            <select
-                placeholder="Buscar en todos los gifs"
-                className="search-input"
-            >
-                <option>1</option>
-            </select>
-        </div>
-        );
-    }
+          </div>
+        );//close return
+            }
 }
 export default FormApi;    
