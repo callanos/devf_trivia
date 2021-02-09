@@ -1,4 +1,4 @@
-# js-quiz-app
+# trivia-devapp
 javascript quiz app using webpack and es6
 
 ## Installation
